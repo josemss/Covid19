@@ -1,0 +1,239 @@
+---
+title: "Covid-19: The case of Spain"
+author: by JMSS (Usal - CIC)
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F, comment = NA)
+
+```
+# Models for the coronavirus crisis
+
+## SIR MODEL
+
+I will use the same model used in this post: [Epidemiology: How contagious is Novel Coronavirus (2019-nCoV)](http://blog.ephorie.de/epidemiology-how-contagious-is-novel-coronavirus-2019-ncov)?. You can find all the details there and in the comments. It is a [SIR model](https://es.wikipedia.org/wiki/Modelo_SIR).
+
+The results should not be taken seriously since the absence of real data makes the model inconsistent. This entry was created for informational purposes on SIR models. I will try to update it daily. More reliable information can be found at [IMM-UPV](https://www.imm.upv.es/covid-19/)
+
+Daily data: [Wikipedia](https://es.wikipedia.org/wiki/Pandemia_de_enfermedad_por_coronavirus_de_2020_en_España)
+
+```{r library, include=FALSE}
+library(deSolve)
+library(ggplot2)
+library(gridExtra)
+library(reshape2)
+library(gridExtra)
+library(ggpmisc)
+library(ggrepel)
+```
+
+```{r data, include=FALSE}
+Infected <- c(1,2,3,4,8,14,26,45,59,84,125,169,228,282,365,430,674,1231,1695,2277,3146,5232,6332,7844,9942,11178,14769,18077,20410,25374,28768,33089,39673,47610)
+new.Infec <- c(1,diff(Infected))
+incr.pct <- round((diff(Infected)/head(Infected, -1))*100, 2)
+
+Deaths <- c(0,0,1,1,1,1,1,1,1,1,1,2,3,3,8,10,17,30,36,55,86,133,193,292,342,491,638,833,1043,1378,1772,2182,2696,3434)
+incr.dth <- round((diff(Deaths)/head(Deaths, -1))*100, 2)
+incr.dth[which(!is.finite(incr.dth))] <- 0
+
+Day <- 1:(length(Infected))
+xlabs <- format(as.Date(Day, origin = "2020/02/20"), format = "%d-%m")
+N <- 47100396 # population of Spain from INE
+```
+
+```{r data plots, echo=FALSE}
+ggplot(data.frame(Day = Day, Infected = Infected), aes(Day, Infected)) +
+  geom_point(col = "blue", size = 2) + geom_line() + theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, size = 9, vjust = 0.5)) +
+  scale_x_continuous(breaks = Day, labels = xlabs) + ylab("Infected (real data)") +
+  labs(title = "Infected (real data)") +
+  geom_text_repel(aes(label = Infected), vjust = -0.6, size = 3.5, col = "blue")
+
+ggplot(data.frame(Day = Day, Infected = Infected), aes(Day, Infected)) +
+  geom_point(aes(col = "observed"), size = 2) + geom_line() + theme_bw() + theme(axis.text.x = element_text(angle = 90, size = 9, vjust = 0.5)) +
+  scale_x_continuous(breaks = Day, labels = xlabs) + ylab("Infected (compared to exponential)") + 
+  scale_y_continuous(trans = 'log10') + geom_smooth(method = 'lm', se = F, aes(col = "exponential")) +
+  labs(title = "Infected (compared to exponential)") +
+  scale_colour_manual(name = "", values = c(observed = "blue", exponential = "red"))
+
+```
+
+Since we do not know the true data of infected people, two important variables to take into account are the daily increase in infected and death people.
+
+```{r increase plot, echo=FALSE}
+ggplot(data.frame(Day = Day, Increase = c(100, incr.pct)), aes(Day, Increase)) + theme_bw() + geom_line(lty = 2) + theme(axis.text.x = element_text(angle = 90, size = 9, vjust = 0.5)) + geom_point() +
+  scale_x_continuous(breaks = Day, labels = xlabs) + ylab("% daily increase") +
+  labs(title = "% daily increase in infections") + 
+  geom_text_repel(aes(label = paste0(Increase, "%")), hjust = 0.5, nudge_x = 0.2, vjust = -0.7, size = 3.5, col = "blue")
+
+ggplot(data.frame(Day = Day, Increase = c(0, incr.dth)), aes(Day, Increase)) + theme_bw() + geom_line(lty = 2) + theme(axis.text.x = element_text(angle = 90, size = 9, vjust = 0.5)) + geom_point() +
+  scale_x_continuous(breaks = Day, labels = xlabs) + ylab("% daily increase") +
+  labs(title = "% daily increase in deaths") + 
+  geom_text_repel(aes(label = paste0(Increase, "%")), hjust = 0.5, nudge_x = 0.2, vjust = -0.7, size = 3.5, col = "red")
+
+```
+
+Estimates with the SIR model:
+
+```{r SIR functions, include=FALSE}
+## Adjust SIR model
+SIR <- function(time, state, parameters) {
+  par <- as.list(c(state, parameters))
+  with(par, {
+    dS <- -beta/N * I * S
+    dI <- beta/N * I * S - gamma * I
+    dR <- gamma * I
+    list(c(dS, dI, dR))
+  })
+}
+
+init <- c(S = N - Infected[1], I = Infected[1], R = 0)
+RSS <- function(parameters) {
+  names(parameters) <- c("beta", "gamma")
+  out <- ode(y = init, times = Day, func = SIR, parms = parameters)
+  fit <- out[ , 3]
+  sum((Infected - fit)^2)
+}
+
+Opt <- optim(c(0.5, 0.5), RSS, method = "L-BFGS-B", lower = c(0, 0), upper = c(1, 1)) # optimize with some sensible conditions
+Opt$message
+# [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Opt_par <- setNames(Opt$par, c("beta", "gamma"))
+Opt_par
+
+t <- 1:(length(Infected) + 30) # time in days
+fit <- data.frame(ode(y = init, times = t, func = SIR, parms = Opt_par))
+```
+
+```{r SIR plots, echo=FALSE}
+df <- melt(data.frame(Day = fit$time, Susceptibles = fit$S, Infecteds = fit$I, Recovereds = fit$R), id.var = "Day")
+xlabs2 <- format(as.Date(t, origin = "2020/02/20"), format = "%d-%m")
+
+ggplot(df, aes(x = Day, y = value, col = variable)) + geom_line(size = 1.5) + theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, size = 7, vjust = 0.25), axis.text.y = element_text(size = 8),
+        panel.grid.major.x = element_blank(), legend.text = element_text(size = 8), legend.position = c(0.15,0.75)) +
+  scale_x_continuous(breaks = fit$time, labels = xlabs2) + ylab("Number of subjects") +
+  scale_color_manual(values = c("grey", "tomato1", "lightgreen")) + 
+  scale_y_continuous(breaks = seq(0, 5, by = 0.5)*10^7) +
+  geom_vline(xintercept = which(fit$I == max(fit$I)), col = "blue", linetype = "dotted", size = 1)
+
+ggplot(df, aes(x = Day, y = value, col = variable)) + geom_line(size = 1.5) + theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, size = 7, vjust = 0.25), axis.text.y = element_text(size = 8),
+        panel.grid.major.x = element_blank(), legend.text = element_text(size = 8), legend.position = c(0.15,0.75)) +
+  scale_x_continuous(breaks = fit$time, labels = xlabs2) + ylab("Number of subjects") +
+  scale_color_manual(values = c("grey", "tomato1", "lightgreen")) + 
+  scale_y_continuous(trans = 'log10', breaks = 10^(0:8)) +
+  geom_vline(xintercept = which(fit$I == max(fit$I)), col = "blue", linetype = "dotted", size = 1)
+
+```
+
+```{r SIR prediction, include=FALSE}
+severe <- 0.37*0.5
+uci <- 0.05
+death <- 0.007 #(datos$Muertos/datos$Casos.confirmados)[length(Infected)]
+  
+R0 <- setNames(Opt_par["beta"] / Opt_par["gamma"], "R0"); R0
+
+max <- fit[fit$I == max(fit$I), "I", drop = FALSE]; max # height of pandemic
+max.index <- which(fit$I == max(fit$I))
+max.day <- format(as.Date(max.index, "2020/02/20"), 
+                  format = "%d/%m/%Y"); max.day # date of height of pandemic
+
+max_infected <- max(fit$I); max_infected # infected cases
+
+max.severe <- max_infected * severe; max.severe # severe cases
+
+max.uci <- max_infected * uci; max.uci # cases with need for intensive care
+
+max.death <- max_infected * death; max.death # deaths with supposed 3% fatality rate
+
+tomorrow <- round(fit$I[(as.numeric(Sys.Date() - as.Date("2020/02/20")))], 0)
+
+```
+
+According to this model, the rate of infection is `r round(R0,2)`, the height of the pandemic will be reached by `r max.day`.
+
+About `r sprintf("%.0f", max_infected)` people would be infected by then, which translates to about `r sprintf("%.0f", max.severe)` severe cases, about `r sprintf("%.0f", max.uci)` cases in need of intensive care and up to `r sprintf("%.0f", max.death)` deaths.
+
+##### Infected forecast for tomorrow: `r sprintf("%.0f", tomorrow)` (`r Sys.Date()+1`)
+
+Previous predictions:
+
+```{r beforeSIR, echo=FALSE}
+predicted <- c(24896,30117,35272,57913,48440) # from Mar 21
+# 26mar -> 57420
+observed <- tail(Infected, length(predicted))
+
+error <- round(100*(1 - (observed/predicted)), 1)
+
+day <- format(Sys.Date() - (length(predicted):1) + 1, format = "%d-%m")
+
+df <- data.frame(d = day, p = predicted, o = observed, e = error)
+
+writeLines(apply(df, 1, function(x) {paste(x[1]," -> predicted = ",x[2],"; observed = ",x[3],"; error = ",x[4],"%", sep = "")}))
+
+```
+
+
+## REGRESSION MODEL
+
+How the SIR model seems to predict worse, I use a cubic polynomial regression model. See [Wikipedia.](https://en.wikipedia.org/wiki/Regression_analysis)
+
+The fit of the model is very good since the coefficient $R^2$ is very close to 1.
+
+```{r regresion, echo=FALSE}
+
+x <- 1:length(Infected)
+df <- data.frame(T = x, Y = Infected)
+
+fit.poly <- lm(Y ~ poly(T, 3, raw=TRUE), data = df)
+# summary(fit.poly)
+
+day.pred <- length(Infected) + 1
+pred <- as.data.frame(predict(fit.poly, data.frame(T = day.pred), interval = "prediction"))
+rownames(pred) <- "Tomorrow"
+
+today <- as.data.frame(predict(fit.poly, data.frame(T = day.pred - 1)))
+
+formula <- y ~ poly(x, 3, raw = TRUE)
+
+ggplot(df, aes(T, Y)) + geom_point(size = 2) +
+  geom_smooth(method = "loess", se = F) + theme_bw() +
+  scale_x_continuous(breaks = Day, labels = xlabs) +
+  scale_y_continuous(breaks = seq(0, max(Infected), by = 5000)) +
+  theme(axis.text.x = element_text(angle = 90, size = 8, vjust = 0.5),
+        axis.text.y = element_text(size = 8, hjust = 0.5)) +
+  labs(title = "Regression model for infected") +
+  stat_poly_eq(formula = formula, coef.digits = 5, rr.digits = 4, parse = T, size = 4, aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~~"))) +
+  annotation_custom(tableGrob(round(pred, 0), theme = ttheme_default(base_size = 8)), xmin = 1.5, xmax = 11, ymin = max(df$Y)*0.75, ymax = max(df$Y)*0.85) +
+  xlab("Day") + ylab("Infected")
+
+```
+
+##### Infected forecast for tomorrow (`r Sys.Date()+1`): `r sprintf("%.0f",pred[1])`,  with 95% prediction interval: (`r sprintf("%.0f",pred[2])` , `r sprintf("%.0f",pred[3])`)  
+
+Previous predictions:
+
+```{r beforeREG, echo=FALSE}
+predicted <- c(38574,44008) # from mar 24
+# 26mar -> 57420
+observed <- tail(Infected, length(predicted))
+
+error <- round(100*(1 - (observed/predicted)), 1)
+
+day <- format(Sys.Date() - (length(predicted):1) + 1, format = "%d-%m")
+
+df <- data.frame(d = day, p = predicted, o = observed, e = error)
+
+writeLines(apply(df, 1, function(x) {paste(x[1]," -> predicted = ",x[2],"; observed = ",x[3],"; error = ",x[4],"%", sep = "")}))
+
+```
+
+
+---
+
+#StayAtHome #QuedateEnCasa
