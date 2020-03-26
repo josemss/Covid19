@@ -40,7 +40,7 @@ vignettes/*.pdf
 .xlsm
 .xlsx
 .xls
-Thumbs.db
+(?i)thumbs.db
 .Rmd
 old*.md
 *.db
