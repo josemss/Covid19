@@ -36,10 +36,10 @@ vignettes/*.pdf
 *.knit.md
 
 # My files
-*.R
-*.xlsm
-*.xlsx
-*.xls
+.R
+.xlsm
+.xlsx
+.xls
 Thumbs.db
-*.Rmd
+.Rmd
 old*.md
