@@ -32,14 +32,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->![](README_files/figure-gfm/SIR%20plots-2.png)<!-- -->
 
-According to this model, the rate of infection is 1.97, the height of
-the pandemic will be reached by 14/04/2020.
+According to this model, the rate of infection is 1.95, the height of
+the pandemic will be reached by 15/04/2020.
 
-About 6987260 people would be infected by then, which translates to
-about 1292643 severe cases, about 349363 cases in need of intensive care
-and up to 97822 deaths.
+About 6825558 people would be infected by then, which translates to
+about 1262728 severe cases, about 341278 cases in need of intensive care
+and up to 95558 deaths.
 
-##### Infected forecast for tomorrow: 67868 (2020-03-27)
+#### Infected forecast for tomorrow: 78955 (2020-03-28)
 
 Previous predictions:
 
@@ -49,6 +49,7 @@ Previous predictions:
     24-03 -> predicted = 57913; observed = 39673; error = 31.5%
     25-03 -> predicted = 48440; observed = 47610; error =  1.7%
     26-03 -> predicted = 57420; observed = 56188; error =  2.1%
+    27-03 -> predicted = 67868; observed = 64059; error =  5.6%
 
 ## REGRESSION MODEL
 
@@ -56,18 +57,30 @@ How the SIR model seems to predict worse, I use a cubic polynomial
 regression model. See
 [Wikipedia.](https://en.wikipedia.org/wiki/Regression_analysis)
 
-The fit of the model is very good since the coefficient \(R^2\) is very
-close to 1.
+The fit of the model is very good since the coefficient R<sup>2</sup> is
+very close to 1.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-03-27): 60476, with 95% prediction interval: (58065 , 62887)
+##### Infected forecast for tomorrow (2020-03-28): 69832, with 95% prediction interval: (67150 , 72514)
+
+##### Deaths forecast for tomorrow (2020-03-28): 5256, with 95% prediction interval: (4892 , 5619)
 
 Previous predictions:
+
+    Infected forecast:
 
     24-03 -> predicted = 38574; observed = 39673; error = -2.8%
     25-03 -> predicted = 44008; observed = 47610; error = -8.2%
     26-03 -> predicted = 51614; observed = 56188; error = -8.9%
+    27-03 -> predicted = 60476; observed = 64059; error = -5.9%
+
+    Deaths forecast:
+
+    24-03 -> predicted = 2836; observed = 2696; error =  4.9%
+    25-03 -> predicted = 3355; observed = 3434; error = -2.4%
+    26-03 -> predicted = 3930; observed = 4089; error = -4.0%
+    27-03 -> predicted = 4563; observed = 4858; error = -6.5%
 
 -----
 
