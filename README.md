@@ -32,14 +32,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->![](README_files/figure-gfm/SIR%20plots-2.png)<!-- -->
 
-According to this model, the rate of infection is 1.95, the height of
-the pandemic will be reached by 15/04/2020.
+According to this model, the rate of infection is 1.93, the height of
+the pandemic will be reached by 16/04/2020.
 
-About 6825558 people would be infected by then, which translates to
-about 1262728 severe cases, about 341278 cases in need of intensive care
-and up to 95558 deaths.
+About 6645669 people would be infected by then, which translates to
+about 1229449 severe cases, about 332283 cases in need of intensive care
+and up to 93039 deaths.
 
-#### Infected forecast for tomorrow: 78955 (2020-03-28)
+#### Infected forecast for tomorrow: 90661 (2020-03-29)
 
 Previous predictions:
 
@@ -50,6 +50,7 @@ Previous predictions:
     25-03 -> predicted = 48440; observed = 47610; error =  1.7%
     26-03 -> predicted = 57420; observed = 56188; error =  2.1%
     27-03 -> predicted = 67868; observed = 64059; error =  5.6%
+    28-03 -> predicted = 78955; observed = 72248; error =  8.5%
 
 ## REGRESSION MODEL
 
@@ -62,9 +63,9 @@ very close to 1.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-03-28): 69832, with 95% prediction interval: (67150 , 72514)
+##### Infected forecast for tomorrow (2020-03-29): 79588, with 95% prediction interval: (76832 , 82345)
 
-##### Deaths forecast for tomorrow (2020-03-28): 5256, with 95% prediction interval: (4892 , 5619)
+##### Deaths forecast for tomorrow (2020-03-29): 6199, with 95% prediction interval: (5812 , 6586)
 
 Previous predictions:
 
@@ -74,6 +75,7 @@ Previous predictions:
     25-03 -> predicted = 44008; observed = 47610; error = -8.2%
     26-03 -> predicted = 51614; observed = 56188; error = -8.9%
     27-03 -> predicted = 60476; observed = 64059; error = -5.9%
+    28-03 -> predicted = 69832; observed = 72248; error = -3.5%
 
     Deaths forecast:
 
@@ -81,6 +83,7 @@ Previous predictions:
     25-03 -> predicted = 3355; observed = 3434; error = -2.4%
     26-03 -> predicted = 3930; observed = 4089; error = -4.0%
     27-03 -> predicted = 4563; observed = 4858; error = -6.5%
+    28-03 -> predicted = 5256; observed = 5690; error = -8.3%
 
 -----
 
