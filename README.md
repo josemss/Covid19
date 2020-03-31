@@ -9,13 +9,20 @@ by JMSS (Usal - CIC)
 Daily data:
 [Wikipedia](https://es.wikipedia.org/wiki/Pandemia_de_enfermedad_por_coronavirus_de_2020_en_España)
 
-![](README_files/figure-gfm/data%20plots-1.png)<!-- -->![](README_files/figure-gfm/data%20plots-2.png)<!-- -->
+![](README_files/figure-gfm/data%20plots-1.png)<!-- -->![](README_files/figure-gfm/data%20plots-2.png)<!-- -->![](README_files/figure-gfm/data%20plots-3.png)<!-- -->![](README_files/figure-gfm/data%20plots-4.png)<!-- -->
 
 Since we do not know the true data of infected people, two important
 variables to take into account are the daily increase in infected and
 death people.
 
 ![](README_files/figure-gfm/increase%20plot-1.png)<!-- -->![](README_files/figure-gfm/increase%20plot-2.png)<!-- -->
+
+The following graph shows the differences between CC.AA. (regions) in
+mortality per 10,000 inhabitants.
+
+![](README_files/figure-gfm/mort-1.png)<!-- -->
+
+-----
 
 ## SIR MODEL
 
@@ -34,14 +41,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->![](README_files/figure-gfm/SIR%20plots-2.png)<!-- -->
 
-According to this model, the rate of infection is 1.88, the height of
+According to this model, the rate of infection is 1.86, the height of
 the pandemic will be reached by 18/04/2020.
 
-About 6241056 people would be infected by then, which translates to
-about 2995707 hospitalized cases, about 374463 cases in need of
-intensive care (UCI) and up to 499284 deaths.
+About 6053866 people would be infected by then, which translates to
+about 2905856 hospitalized cases, about 363232 cases in need of
+intensive care (UCI) and up to 484309 deaths.
 
-#### Infected forecast for tomorrow: 113086 (2020-03-31)
+#### Infected forecast for tomorrow: 125311 (2020-04-01)
 
 Previous predictions:
 
@@ -55,6 +62,9 @@ Previous predictions:
     28-03 -> predicted =  78955; observed = 72248; error =  8.5%
     29-03 -> predicted =  90661; observed = 78797; error = 13.1%
     30-03 -> predicted = 102000; observed = 85195; error = 16.5%
+    31-03 -> predicted = 113106; observed = 94417; error = 16.5%
+
+-----
 
 ## REGRESSION MODEL
 
@@ -67,9 +77,9 @@ very close to 1.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-03-31): 97620, with 95% prediction interval: (94685 , 100555)
+##### Infected forecast for tomorrow (2020-04-01): 107073, with 95% prediction interval: (104001 , 110144)
 
-##### Deaths forecast for tomorrow (2020-03-31): 8212, with 95% prediction interval: (7821 , 8602)
+##### Deaths forecast for tomorrow (2020-04-01): 9248, with 95% prediction interval: (8865 , 9630)
 
 Previous predictions:
 
@@ -82,6 +92,7 @@ Previous predictions:
     28-03 -> predicted = 69832; observed = 72248; error = -3.5%
     29-03 -> predicted = 79588; observed = 78797; error =  1.0%
     30-03 -> predicted = 88856; observed = 85195; error =  4.1%
+    31-03 -> predicted = 97620; observed = 94417; error =  3.3%
 
     Deaths forecast:
 
@@ -92,6 +103,7 @@ Previous predictions:
     28-03 -> predicted = 5256; observed = 5690; error = -8.3%
     29-03 -> predicted = 6199; observed = 6528; error = -5.3%
     30-03 -> predicted = 7196; observed = 7340; error = -2.0%
+    31-03 -> predicted = 8212; observed = 8189; error =  0.3%
 
 -----
 
