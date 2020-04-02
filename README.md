@@ -2,7 +2,7 @@ Covid-19: The case of Spain
 ================
 by JMSS (Usal - CIC)
 
-# Models for the coronavirus crisis
+# Models for the COVID-19 pandemic in Spain
 
 ## DATA
 
@@ -43,14 +43,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.42, the height of
-the pandemic will be reached by 16/04/2020.
+According to this model, the rate of infection is 1.82, the height of
+the pandemic will be reached by 20/04/2020.
 
-About 2305391 people would be infected by then, which translates to
-about 1106588 hospitalized cases, about 138323 cases in need of
-intensive care (UCI) and up to 184431 deaths.
+About 5720649 people would be infected by then, which translates to
+about 2745911 hospitalized cases, about 343239 cases in need of
+intensive care (UCI) and up to 457652 deaths.
 
-#### Infected forecast for tomorrow: 137373 (2020-04-02)
+#### Infected forecast for tomorrow: 150165 (2020-04-03)
 
 Previous predictions:
 
@@ -66,6 +66,7 @@ Previous predictions:
     30-03 -> predicted = 102000; observed =  85195; error = 16.5%
     31-03 -> predicted = 113106; observed =  94417; error = 16.5%
     01-04 -> predicted = 125311; observed = 102136; error = 18.5%
+    02-04 -> predicted = 137373; observed = 110238; error = 19.8%
 
 -----
 
@@ -82,9 +83,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-02): 116393, with 95% prediction interval: (112964 , 119821)
+##### Infected forecast for tomorrow (2020-04-03): 125701, with 95% prediction interval: (121780 , 129621)
 
-##### Deaths forecast for tomorrow (2020-04-02): 10296, with 95% prediction interval: (9915 , 10677)
+##### Deaths forecast for tomorrow (2020-04-03): 11379, with 95% prediction interval: (10994 , 11765)
 
 Previous predictions:
 
@@ -99,18 +100,20 @@ Previous predictions:
     30-03 -> predicted =  88856; observed =  85195; error =  4.1%
     31-03 -> predicted =  97620; observed =  94417; error =  3.3%
     01-04 -> predicted = 107073; observed = 102136; error =  4.6%
+    02-04 -> predicted = 116393; observed = 110238; error =  5.3%
 
     Deaths forecast:
 
-    24-03 -> predicted = 2836; observed = 2696; error =  4.9%
-    25-03 -> predicted = 3355; observed = 3434; error = -2.4%
-    26-03 -> predicted = 3930; observed = 4089; error = -4.0%
-    27-03 -> predicted = 4563; observed = 4858; error = -6.5%
-    28-03 -> predicted = 5256; observed = 5690; error = -8.3%
-    29-03 -> predicted = 6199; observed = 6528; error = -5.3%
-    30-03 -> predicted = 7196; observed = 7340; error = -2.0%
-    31-03 -> predicted = 8212; observed = 8189; error =  0.3%
-    01-04 -> predicted = 9248; observed = 9053; error =  2.1%
+    24-03 -> predicted =  2836; observed =  2696; error =  4.9%
+    25-03 -> predicted =  3355; observed =  3434; error = -2.4%
+    26-03 -> predicted =  3930; observed =  4089; error = -4.0%
+    27-03 -> predicted =  4563; observed =  4858; error = -6.5%
+    28-03 -> predicted =  5256; observed =  5690; error = -8.3%
+    29-03 -> predicted =  6199; observed =  6528; error = -5.3%
+    30-03 -> predicted =  7196; observed =  7340; error = -2.0%
+    31-03 -> predicted =  8212; observed =  8189; error =  0.3%
+    01-04 -> predicted =  9248; observed =  9053; error =  2.1%
+    02-04 -> predicted = 10296; observed = 10003; error =  2.8%
 
 -----
 
