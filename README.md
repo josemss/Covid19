@@ -43,14 +43,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.82, the height of
-the pandemic will be reached by 20/04/2020.
+According to this model, the rate of infection is 1.4, the height of the
+pandemic will be reached by 17/04/2020.
 
-About 5720649 people would be infected by then, which translates to
-about 2745911 hospitalized cases, about 343239 cases in need of
-intensive care (UCI) and up to 457652 deaths.
+About 2146998 people would be infected by then, which translates to
+about 1030559 hospitalized cases, about 128820 cases in need of
+intensive care (UCI) and up to 171760 deaths.
 
-#### Infected forecast for tomorrow: 150165 (2020-04-03)
+#### Infected forecast for tomorrow: 162414 (2020-04-04)
 
 Previous predictions:
 
@@ -67,6 +67,7 @@ Previous predictions:
     31-03 -> predicted = 113106; observed =  94417; error = 16.5%
     01-04 -> predicted = 125311; observed = 102136; error = 18.5%
     02-04 -> predicted = 137373; observed = 110238; error = 19.8%
+    03-04 -> predicted = 150165; observed = 117710; error = 21.6%
 
 -----
 
@@ -83,9 +84,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-03): 125701, with 95% prediction interval: (121780 , 129621)
+##### Infected forecast for tomorrow (2020-04-04): 134713, with 95% prediction interval: (130080 , 139346)
 
-##### Deaths forecast for tomorrow (2020-04-03): 11379, with 95% prediction interval: (10994 , 11765)
+##### Deaths forecast for tomorrow (2020-04-04): 12475, with 95% prediction interval: (12070 , 12880)
 
 Previous predictions:
 
@@ -101,6 +102,7 @@ Previous predictions:
     31-03 -> predicted =  97620; observed =  94417; error =  3.3%
     01-04 -> predicted = 107073; observed = 102136; error =  4.6%
     02-04 -> predicted = 116393; observed = 110238; error =  5.3%
+    03-04 -> predicted = 125701; observed = 117710; error =  6.4%
 
     Deaths forecast:
 
@@ -114,6 +116,7 @@ Previous predictions:
     31-03 -> predicted =  8212; observed =  8189; error =  0.3%
     01-04 -> predicted =  9248; observed =  9053; error =  2.1%
     02-04 -> predicted = 10296; observed = 10003; error =  2.8%
+    03-04 -> predicted = 11379; observed = 10935; error =  3.9%
 
 -----
 
