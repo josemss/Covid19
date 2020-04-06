@@ -26,6 +26,90 @@ mortality per 10,000 inhabitants.
 
 -----
 
+## CUBIC SPLINES
+
+Since April 5, I propose this new model to predict the number of deaths,
+since the SIR and regression models seem to make bigger mistakes in
+their predictions.
+
+It is based on interpolation with cubic splines. See
+[Wikipedia](https://en.wikipedia.org/wiki/Spline_interpolation)
+
+![](README_files/figure-gfm/splinesI-1.png)<!-- -->
+
+![](README_files/figure-gfm/splinesD-1.png)<!-- -->
+
+##### Infecteds forecast for tomorrow (2020-04-07): 139305
+
+##### Deaths forecast for tomorrow (2020-04-07): 13692
+
+Previous predictions:
+
+    Infecteds forecast:
+
+    06-04 -> predicted = 136782; observed = 135032; error = 1.3%
+
+    Deaths forecast:
+
+    06-04 -> predicted = 13092; observed = 13055; error = 0.3%
+
+-----
+
+## REGRESSION MODEL
+
+Here I use a cubic polynomial regression model to predict number of
+infecteds and deaths. See
+[Wikipedia.](https://en.wikipedia.org/wiki/Regression_analysis)
+
+The goodness of fit of this model is very good since the coefficient
+R<sup>2</sup> is very close to 1. At the moment a cubic fit works well,
+although when it reaches the maximum it is likely that the precision of
+the model will decrease.
+
+![](README_files/figure-gfm/regresion-1.png)<!-- -->
+
+##### Infected forecast for tomorrow (2020-04-07): 157785, with 95% prediction interval: (149493 , 166077)
+
+##### Deaths forecast for tomorrow (2020-04-07): 15379, with 95% prediction interval: (14660 , 16097)
+
+Previous predictions:
+
+    Infected forecast:
+
+    24-03 -> predicted =  38574; observed =  39673; error = -2.8%
+    25-03 -> predicted =  44008; observed =  47610; error = -8.2%
+    26-03 -> predicted =  51614; observed =  56188; error = -8.9%
+    27-03 -> predicted =  60476; observed =  64059; error = -5.9%
+    28-03 -> predicted =  69832; observed =  72248; error = -3.5%
+    29-03 -> predicted =  79588; observed =  78797; error =  1.0%
+    30-03 -> predicted =  88856; observed =  85195; error =  4.1%
+    31-03 -> predicted =  97620; observed =  94417; error =  3.3%
+    01-04 -> predicted = 107073; observed = 102136; error =  4.6%
+    02-04 -> predicted = 116393; observed = 110238; error =  5.3%
+    03-04 -> predicted = 125701; observed = 117710; error =  6.4%
+    04-04 -> predicted = 134713; observed = 124736; error =  7.4%
+    05-04 -> predicted = 143291; observed = 130759; error =  8.7%
+    06-04 -> predicted = 151139; observed = 135032; error = 10.7%
+
+    Deaths forecast:
+
+    24-03 -> predicted =  2836; observed =  2696; error =  4.9%
+    25-03 -> predicted =  3355; observed =  3434; error = -2.4%
+    26-03 -> predicted =  3930; observed =  4089; error = -4.0%
+    27-03 -> predicted =  4563; observed =  4858; error = -6.5%
+    28-03 -> predicted =  5256; observed =  5690; error = -8.3%
+    29-03 -> predicted =  6199; observed =  6528; error = -5.3%
+    30-03 -> predicted =  7196; observed =  7340; error = -2.0%
+    31-03 -> predicted =  8212; observed =  8189; error =  0.3%
+    01-04 -> predicted =  9248; observed =  9053; error =  2.1%
+    02-04 -> predicted = 10296; observed = 10003; error =  2.8%
+    03-04 -> predicted = 11379; observed = 10935; error =  3.9%
+    04-04 -> predicted = 12475; observed = 11744; error =  5.9%
+    05-04 -> predicted = 13529; observed = 12418; error =  8.2%
+    06-04 -> predicted = 14496; observed = 13055; error =  9.9%
+
+-----
+
 ## SIR MODEL
 
 I will use the same model used in this post: [Epidemiology: How
@@ -43,14 +127,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.38, the height of
-the pandemic will be reached by 19/04/2020.
+According to this model, the rate of infection is 1.75, the height of
+the pandemic will be reached by 24/04/2020.
 
-About 1998423 people would be infected by then, which translates to
-about 959243 hospitalized cases, about 119905 cases in need of intensive
-care (UCI) and up to 159874 deaths.
+About 5073666 people would be infected by then, which translates to
+about 2435360 hospitalized cases, about 304420 cases in need of
+intensive care (UCI) and up to 405893 deaths.
 
-#### Infected forecast for tomorrow: 186188 (2020-04-06)
+#### Infected forecast for tomorrow: 196945 (2020-04-07)
 
 Previous predictions:
 
@@ -70,60 +154,10 @@ Previous predictions:
     03-04 -> predicted = 150165; observed = 117710; error = 21.6%
     04-04 -> predicted = 162414; observed = 124736; error = 23.2%
     05-04 -> predicted = 174860; observed = 130759; error = 25.2%
-
------
-
-## REGRESSION MODEL
-
-How the SIR model seems to predict worse, I use a cubic polynomial
-regression model. See
-[Wikipedia.](https://en.wikipedia.org/wiki/Regression_analysis)
-
-The goodness of fit of this model is very good since the coefficient
-R<sup>2</sup> is very close to 1. At the moment a cubic fit works well,
-although when it reaches the maximum it is likely that the precision of
-the model will decrease.
-
-![](README_files/figure-gfm/regresion-1.png)<!-- -->
-
-##### Infected forecast for tomorrow (2020-04-06): 151139, with 95% prediction interval: (144412 , 157867)
-
-##### Deaths forecast for tomorrow (2020-04-06): 14496, with 95% prediction interval: (13924 , 15068)
-
-Previous predictions:
-
-    Infected forecast:
-
-    24-03 -> predicted =  38574; observed =  39673; error = -2.8%
-    25-03 -> predicted =  44008; observed =  47610; error = -8.2%
-    26-03 -> predicted =  51614; observed =  56188; error = -8.9%
-    27-03 -> predicted =  60476; observed =  64059; error = -5.9%
-    28-03 -> predicted =  69832; observed =  72248; error = -3.5%
-    29-03 -> predicted =  79588; observed =  78797; error =  1.0%
-    30-03 -> predicted =  88856; observed =  85195; error =  4.1%
-    31-03 -> predicted =  97620; observed =  94417; error =  3.3%
-    01-04 -> predicted = 107073; observed = 102136; error =  4.6%
-    02-04 -> predicted = 116393; observed = 110238; error =  5.3%
-    03-04 -> predicted = 125701; observed = 117710; error =  6.4%
-    04-04 -> predicted = 134713; observed = 124736; error =  7.4%
-    05-04 -> predicted = 143291; observed = 130759; error =  8.7%
-
-    Deaths forecast:
-
-    24-03 -> predicted =  2836; observed =  2696; error =  4.9%
-    25-03 -> predicted =  3355; observed =  3434; error = -2.4%
-    26-03 -> predicted =  3930; observed =  4089; error = -4.0%
-    27-03 -> predicted =  4563; observed =  4858; error = -6.5%
-    28-03 -> predicted =  5256; observed =  5690; error = -8.3%
-    29-03 -> predicted =  6199; observed =  6528; error = -5.3%
-    30-03 -> predicted =  7196; observed =  7340; error = -2.0%
-    31-03 -> predicted =  8212; observed =  8189; error =  0.3%
-    01-04 -> predicted =  9248; observed =  9053; error =  2.1%
-    02-04 -> predicted = 10296; observed = 10003; error =  2.8%
-    03-04 -> predicted = 11379; observed = 10935; error =  3.9%
-    04-04 -> predicted = 12475; observed = 11744; error =  5.9%
-    05-04 -> predicted = 13529; observed = 12418; error =  8.2%
+    06-04 -> predicted = 186188; observed = 135032; error = 27.5%
 
 -----
 
 \#StayAtHome \#QuedateEnCasa
+
+-----
