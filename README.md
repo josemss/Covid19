@@ -29,7 +29,7 @@ mortality per 10,000 inhabitants.
 ## CUBIC SPLINES
 
 Since April 5, I propose this new model to predict the number of deaths,
-since the SIR and regression models seem to make bigger mistakes in
+cause the SIR and Regression models seem to make bigger mistakes in
 their predictions.
 
 It is based on interpolation with cubic splines. See
@@ -39,9 +39,9 @@ It is based on interpolation with cubic splines. See
 
 ![](README_files/figure-gfm/splinesD-1.png)<!-- -->
 
-##### Infecteds forecast for tomorrow (2020-04-10): 158202
+##### Infecteds forecast for tomorrow (2020-04-11): 161598
 
-##### Deaths forecast for tomorrow (2020-04-10): 15921
+##### Deaths forecast for tomorrow (2020-04-11): 16448
 
 Previous predictions:
 
@@ -51,6 +51,7 @@ Previous predictions:
     07-04 -> predicted = 139305; observed = 140510; error = -0.9%
     08-04 -> predicted = 145988; observed = 146690; error = -0.5%
     09-04 -> predicted = 152870; observed = 152446; error =  0.3%
+    10-04 -> predicted = 158202; observed = 157022; error =  0.7%
 
     Deaths forecast:
 
@@ -58,6 +59,7 @@ Previous predictions:
     07-04 -> predicted = 13692; observed = 13798; error = -0.8%
     08-04 -> predicted = 14541; observed = 14555; error = -0.1%
     09-04 -> predicted = 15312; observed = 15238; error =  0.5%
+    10-04 -> predicted = 15921; observed = 15843; error =  0.5%
 
 -----
 
@@ -77,9 +79,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-10): 159990, with 95% prediction interval: (153387 , 166593)
+##### Infected forecast for tomorrow (2020-04-11): 163201, with 95% prediction interval: (156649 , 169753)
 
-##### Deaths forecast for tomorrow (2020-04-10): 16605, with 95% prediction interval: (15776 , 17433)
+##### Deaths forecast for tomorrow (2020-04-11): 17084, with 95% prediction interval: (16238 , 17930)
 
 Previous predictions:
 
@@ -102,6 +104,7 @@ Previous predictions:
     07-04 -> predicted = 157785; observed = 140510; error = 10.9%
     08-04 -> predicted = 163883; observed = 146690; error = 10.5%
     09-04 -> predicted = 156194; observed = 152446; error =  2.4%
+    10-04 -> predicted = 159990; observed = 157022; error =  1.9%
 
     Deaths forecast:
 
@@ -122,6 +125,7 @@ Previous predictions:
     07-04 -> predicted = 15379; observed = 13798; error = 10.3%
     08-04 -> predicted = 16227; observed = 14555; error = 10.3%
     09-04 -> predicted = 16059; observed = 15238; error =  5.1%
+    10-04 -> predicted = 16605; observed = 15843; error =  4.6%
 
 -----
 
@@ -142,14 +146,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.35, the height of
-the pandemic will be reached by 22/04/2020.
+According to this model, the rate of infection is 1.34, the height of
+the pandemic will be reached by 23/04/2020.
 
-About 1722665 people would be infected by then, which translates to
-about 826879 hospitalized cases, about 103360 cases in need of intensive
-care (UCI) and up to 137813 deaths.
+About 1664971 people would be infected by then, which translates to
+about 799186 hospitalized cases, about 99898 cases in need of intensive
+care (UCI) and up to 133198 deaths.
 
-#### Infected forecast for tomorrow: 227228 (2020-04-10)
+#### Infected forecast for tomorrow: 236766 (2020-04-11)
 
 Previous predictions:
 
@@ -173,6 +177,7 @@ Previous predictions:
     07-04 -> predicted = 196945; observed = 140510; error = 28.7%
     08-04 -> predicted = 206927; observed = 146690; error = 29.1%
     09-04 -> predicted = 217154; observed = 152446; error = 29.8%
+    10-04 -> predicted = 227228; observed = 157022; error = 30.9%
 
 -----
 
