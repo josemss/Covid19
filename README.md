@@ -43,37 +43,39 @@ It is based on interpolation with cubic splines. See
 
 ![](README_files/figure-gfm/splinesD-1.png)<!-- -->
 
-##### Infecteds forecast for tomorrow (2020-04-16): 182725
+##### Infecteds forecast for tomorrow (2020-04-17): 187999
 
-##### Deaths forecast for tomorrow (2020-04-16): 19102
+##### Deaths forecast for tomorrow (2020-04-17): 19681
 
 Previous predictions:
 
     Infecteds forecast:
 
-    06-04 -> predicted = 136782; observed = 135032; error =  1.3%
-    07-04 -> predicted = 139305; observed = 140510; error = -0.9%
-    08-04 -> predicted = 145988; observed = 146690; error = -0.5%
-    09-04 -> predicted = 152870; observed = 152446; error =  0.3%
-    10-04 -> predicted = 158202; observed = 157022; error =  0.7%
-    11-04 -> predicted = 161598; observed = 161852; error = -0.2%
-    12-04 -> predicted = 166682; observed = 166019; error =  0.4%
-    13-04 -> predicted = 170186; observed = 169496; error =  0.4%
-    14-04 -> predicted = 172973; observed = 172541; error =  0.2%
-    15-04 -> predicted = 175586; observed = 177633; error = -1.2%
+    06-04 -> predicted = 136782; observed = 135032; error =  1.28%
+    07-04 -> predicted = 139305; observed = 140510; error = -0.87%
+    08-04 -> predicted = 145988; observed = 146690; error = -0.48%
+    09-04 -> predicted = 152870; observed = 152446; error =  0.28%
+    10-04 -> predicted = 158202; observed = 157022; error =  0.75%
+    11-04 -> predicted = 161598; observed = 161852; error = -0.16%
+    12-04 -> predicted = 166682; observed = 166019; error =  0.40%
+    13-04 -> predicted = 170186; observed = 169496; error =  0.41%
+    14-04 -> predicted = 172973; observed = 172541; error =  0.25%
+    15-04 -> predicted = 175586; observed = 177633; error = -1.17%
+    16-04 -> predicted = 182725; observed = 182816; error = -0.05%
 
     Deaths forecast:
 
-    06-04 -> predicted = 13092; observed = 13055; error =  0.3%
-    07-04 -> predicted = 13692; observed = 13798; error = -0.8%
-    08-04 -> predicted = 14541; observed = 14555; error = -0.1%
-    09-04 -> predicted = 15312; observed = 15238; error =  0.5%
-    10-04 -> predicted = 15921; observed = 15843; error =  0.5%
-    11-04 -> predicted = 16448; observed = 16353; error =  0.6%
-    12-04 -> predicted = 16863; observed = 16972; error = -0.6%
-    13-04 -> predicted = 17591; observed = 17489; error =  0.6%
-    14-04 -> predicted = 18006; observed = 18056; error = -0.3%
-    15-04 -> predicted = 18623; observed = 18579; error =  0.2%
+    06-04 -> predicted = 13092; observed = 13055; error =  0.28%
+    07-04 -> predicted = 13692; observed = 13798; error = -0.77%
+    08-04 -> predicted = 14541; observed = 14555; error = -0.10%
+    09-04 -> predicted = 15312; observed = 15238; error =  0.48%
+    10-04 -> predicted = 15921; observed = 15843; error =  0.49%
+    11-04 -> predicted = 16448; observed = 16353; error =  0.58%
+    12-04 -> predicted = 16863; observed = 16972; error = -0.65%
+    13-04 -> predicted = 17591; observed = 17489; error =  0.58%
+    14-04 -> predicted = 18006; observed = 18056; error = -0.28%
+    15-04 -> predicted = 18623; observed = 18579; error =  0.24%
+    16-04 -> predicted = 19102; observed = 19130; error = -0.15%
 
 -----
 
@@ -93,9 +95,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-16): 174407, with 95% prediction interval: (168124 , 180689)
+##### Infected forecast for tomorrow (2020-04-17): 177122, with 95% prediction interval: (170496 , 183747)
 
-##### Deaths forecast for tomorrow (2020-04-16): 18841, with 95% prediction interval: (18014 , 19669)
+##### Deaths forecast for tomorrow (2020-04-17): 19166, with 95% prediction interval: (18346 , 19986)
 
 Previous predictions:
 
@@ -124,6 +126,7 @@ Previous predictions:
     13-04 -> predicted = 168756; observed = 169496; error = -0.4%
     14-04 -> predicted = 170778; observed = 172541; error = -1.0%
     15-04 -> predicted = 172277; observed = 177633; error = -3.1%
+    16-04 -> predicted = 174407; observed = 182816; error = -4.8%
 
     Deaths forecast:
 
@@ -150,6 +153,7 @@ Previous predictions:
     13-04 -> predicted = 17856; observed = 17489; error =  2.1%
     14-04 -> predicted = 18193; observed = 18056; error =  0.8%
     15-04 -> predicted = 18525; observed = 18579; error = -0.3%
+    16-04 -> predicted = 18841; observed = 19130; error = -1.5%
 
 -----
 
@@ -170,14 +174,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.61, the height of
-the pandemic will be reached by 03/05/2020.
+According to this model, the rate of infection is 1.3, the height of the
+pandemic will be reached by 29/04/2020.
 
-About 3883538 people would be infected by then, which translates to
-about 1864098 hospitalized cases, about 233012 cases in need of
-intensive care (UCI) and up to 388354 deaths.
+About 1359949 people would be infected by then, which translates to
+about 652776 hospitalized cases, about 81597 cases in need of intensive
+care (UCI) and up to 135995 deaths.
 
-#### Infected forecast for tomorrow: 278011 (2020-04-16)
+#### Infected forecast for tomorrow: 286247 (2020-04-17)
 
 Previous predictions:
 
@@ -207,6 +211,7 @@ Previous predictions:
     13-04 -> predicted = 254626; observed = 169496; error = 33.4%
     14-04 -> predicted = 262925; observed = 172541; error = 34.4%
     15-04 -> predicted = 270168; observed = 177633; error = 34.3%
+    16-04 -> predicted = 278011; observed = 182816; error = 34.2%
 
 -----
 
