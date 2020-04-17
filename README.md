@@ -6,8 +6,8 @@ by JMSS (Usal - CIC)
 
 ## DATA
 
-Daily data:
-[Wikipedia](https://es.wikipedia.org/wiki/Pandemia_de_enfermedad_por_coronavirus_de_2020_en_España)
+Daily data: [Datadista
+GiHub](https://github.com/datadista/datasets/tree/master/COVID%2019)
 (and Ministerio de Sanidad
 [MSCBS](https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm))
 
@@ -43,9 +43,9 @@ It is based on interpolation with cubic splines. See
 
 ![](README_files/figure-gfm/splinesD-1.png)<!-- -->
 
-##### Infecteds forecast for tomorrow (2020-04-17): 187999
+##### Infecteds forecast for tomorrow (2020-04-18): 193320
 
-##### Deaths forecast for tomorrow (2020-04-17): 19681
+##### Deaths forecast for tomorrow (2020-04-18): 19826
 
 Previous predictions:
 
@@ -62,6 +62,7 @@ Previous predictions:
     14-04 -> predicted = 172973; observed = 172541; error =  0.25%
     15-04 -> predicted = 175586; observed = 177633; error = -1.17%
     16-04 -> predicted = 182725; observed = 182816; error = -0.05%
+    17-04 -> predicted = 187999; observed = 188068; error = -0.04%
 
     Deaths forecast:
 
@@ -76,6 +77,7 @@ Previous predictions:
     14-04 -> predicted = 18006; observed = 18056; error = -0.28%
     15-04 -> predicted = 18623; observed = 18579; error =  0.24%
     16-04 -> predicted = 19102; observed = 19130; error = -0.15%
+    17-04 -> predicted = 19681; observed = 19478; error =  1.03%
 
 -----
 
@@ -95,9 +97,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-17): 177122, with 95% prediction interval: (170496 , 183747)
+##### Infected forecast for tomorrow (2020-04-18): 178734, with 95% prediction interval: (171389 , 186080)
 
-##### Deaths forecast for tomorrow (2020-04-17): 19166, with 95% prediction interval: (18346 , 19986)
+##### Deaths forecast for tomorrow (2020-04-18): 18878, with 95% prediction interval: (18166 , 19590)
 
 Previous predictions:
 
@@ -127,6 +129,7 @@ Previous predictions:
     14-04 -> predicted = 170778; observed = 172541; error = -1.0%
     15-04 -> predicted = 172277; observed = 177633; error = -3.1%
     16-04 -> predicted = 174407; observed = 182816; error = -4.8%
+    17-04 -> predicted = 177122; observed = 188068; error = -6.2%
 
     Deaths forecast:
 
@@ -154,6 +157,7 @@ Previous predictions:
     14-04 -> predicted = 18193; observed = 18056; error =  0.8%
     15-04 -> predicted = 18525; observed = 18579; error = -0.3%
     16-04 -> predicted = 18841; observed = 19130; error = -1.5%
+    17-04 -> predicted = 19166; observed = 19478; error = -1.6%
 
 -----
 
@@ -174,19 +178,19 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.3, the height of the
-pandemic will be reached by 29/04/2020.
+According to this model, the rate of infection is 1.29, the height of
+the pandemic will be reached by 30/04/2020.
 
-About 1359949 people would be infected by then, which translates to
-about 652776 hospitalized cases, about 81597 cases in need of intensive
-care (UCI) and up to 135995 deaths.
+About 1273400 people would be infected by then, which translates to
+about 611232 hospitalized cases, about 76404 cases in need of intensive
+care (UCI) and up to 127340 deaths.
 
-#### Infected forecast for tomorrow: 286247 (2020-04-17)
+#### Infected forecast for tomorrow: 240850 (2020-04-18)
 
 Previous predictions:
 
-    21-03 -> predicted =  24896; observed =  25374; error = -1.9%
-    22-03 -> predicted =  30117; observed =  28768; error =  4.5%
+    21-03 -> predicted =  24896; observed =  24926; error = -0.1%
+    22-03 -> predicted =  30117; observed =  28572; error =  5.1%
     23-03 -> predicted =  35272; observed =  33089; error =  6.2%
     24-03 -> predicted =  57913; observed =  39673; error = 31.5%
     25-03 -> predicted =  48440; observed =  47610; error =  1.7%
@@ -212,6 +216,7 @@ Previous predictions:
     14-04 -> predicted = 262925; observed = 172541; error = 34.4%
     15-04 -> predicted = 270168; observed = 177633; error = 34.3%
     16-04 -> predicted = 278011; observed = 182816; error = 34.2%
+    17-04 -> predicted = 286247; observed = 188068; error = 34.3%
 
 -----
 
