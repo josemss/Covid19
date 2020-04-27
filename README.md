@@ -25,7 +25,7 @@ mortality per 10,000 inhabitants.
 
 ![](README_files/figure-gfm/mort-1.png)<!-- -->
 
-How the curve has flattened:
+
 
 -----
 
