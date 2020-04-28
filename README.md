@@ -1,7 +1,7 @@
 Covid-19: The case of Spain
 ================
 JMSS \[Usal - CIC\]
-(updated: 27 abr 2020)
+(updated: 28 abr 2020)
 
 # Models for the COVID-19 pandemic in Spain
 
@@ -25,8 +25,6 @@ mortality per 10,000 inhabitants.
 
 ![](README_files/figure-gfm/mort-1.png)<!-- -->
 
-How the curve has flattened:
-
 -----
 
 ## CUBIC SPLINES
@@ -42,9 +40,9 @@ It is based on interpolation with cubic splines. See
 
 ![](README_files/figure-gfm/splinesD-1.png)<!-- -->
 
-##### Infecteds forecast for tomorrow (2020-04-28): 232215
+##### Infecteds forecast for tomorrow (2020-04-29): 234834
 
-##### Deaths forecast for tomorrow (2020-04-28): 23852
+##### Deaths forecast for tomorrow (2020-04-29): 24123
 
 Previous predictions:
 
@@ -72,6 +70,7 @@ Previous predictions:
     25-04 -> predicted = 226504; observed = 223759; error =  1.21%
     26-04 -> predicted = 227754; observed = 226629; error =  0.49%
     27-04 -> predicted = 229499; observed = 229422; error =  0.03%
+    28-04 -> predicted = 232215; observed = 232128; error =  0.04%
 
     Deaths forecast:
 
@@ -97,6 +96,7 @@ Previous predictions:
     25-04 -> predicted = 22891; observed = 22902; error = -0.05%
     26-04 -> predicted = 23280; observed = 23190; error =  0.39%
     27-04 -> predicted = 23478; observed = 23521; error = -0.18%
+    28-04 -> predicted = 23852; observed = 23822; error =  0.13%
 
 -----
 
@@ -116,9 +116,9 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-04-28): 220303, with 95% prediction interval: (206369 , 234236)
+##### Infected forecast for tomorrow (2020-04-29): 223900, with 95% prediction interval: (209794 , 238007)
 
-##### Deaths forecast for tomorrow (2020-04-28): 22773, with 95% prediction interval: (21559 , 23987)
+##### Deaths forecast for tomorrow (2020-04-29): 23112, with 95% prediction interval: (21880 , 24344)
 
 Previous predictions:
 
@@ -159,6 +159,7 @@ Previous predictions:
     25-04 -> predicted = 206656; observed = 223759; error = -8.3%
     26-04 -> predicted = 211791; observed = 226629; error = -7.0%
     27-04 -> predicted = 216298; observed = 229422; error = -6.1%
+    28-04 -> predicted = 220303; observed = 232128; error = -5.4%
 
     Deaths forecast:
 
@@ -197,6 +198,7 @@ Previous predictions:
     25-04 -> predicted = 21663; observed = 22902; error = -5.7%
     26-04 -> predicted = 22062; observed = 23190; error = -5.1%
     27-04 -> predicted = 22421; observed = 23521; error = -4.9%
+    28-04 -> predicted = 22773; observed = 23822; error = -4.6%
 
 -----
 
@@ -217,14 +219,14 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.24, the height of
-the pandemic will be reached by 08/05/2020.
+According to this model, the rate of infection is 1.46, the height of
+the pandemic will be reached by 16/05/2020.
 
-About 938462 people would be infected by then, which translates to about
-450462 hospitalized cases, about 56308 cases in need of intensive care
-(UCI) and up to 42231 deaths.
+About 2643621 people would be infected by then, which translates to
+about 1268938 hospitalized cases, about 158617 cases in need of
+intensive care (UCI) and up to 118963 deaths.
 
-#### Infected forecast for tomorrow: 316803 (2020-04-28)
+#### Infected forecast for tomorrow: 316741 (2020-04-29)
 
 Previous predictions:
 
@@ -266,6 +268,7 @@ Previous predictions:
     25-04 -> predicted = 293874; observed = 223759; error = 23.9%
     26-04 -> predicted = 301895; observed = 226629; error = 24.9%
     27-04 -> predicted = 303361; observed = 229422; error = 24.4%
+    28-04 -> predicted = 316803; observed = 232128; error = 26.7%
 
 -----
 
