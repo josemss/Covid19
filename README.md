@@ -1,7 +1,7 @@
 Covid-19: The case of Spain
 ================
 JMSS \[Usal - CIC\]
-(updated: 12 may 2020)
+(updated: 13 may 2020)
 
 # Models for the COVID-19 pandemic in Spain
 
@@ -40,51 +40,52 @@ It is based on interpolation with cubic splines. See
 
 ![](README_files/figure-gfm/splinesD-1.png)<!-- -->
 
-##### Infecteds forecast for tomorrow (2020-05-13): 270729
+##### Infecteds forecast for tomorrow (2020-05-14): 272448
 
-##### Deaths forecast for tomorrow (2020-05-13): 27096
+##### Deaths forecast for tomorrow (2020-05-14): 27288
 
 Previous predictions:
 
     Infecteds forecast:
 
-    06-04 -> predicted = 136782; observed = 142383; error = -4.09%
-    07-04 -> predicted = 139305; observed = 147642; error = -5.98%
-    08-04 -> predicted = 145988; observed = 153244; error = -4.97%
-    09-04 -> predicted = 152870; observed = 159038; error = -4.03%
-    10-04 -> predicted = 158202; observed = 163638; error = -3.44%
-    11-04 -> predicted = 161598; observed = 168595; error = -4.33%
-    12-04 -> predicted = 166682; observed = 172643; error = -3.58%
-    13-04 -> predicted = 170186; observed = 175776; error = -3.28%
-    14-04 -> predicted = 172973; observed = 179109; error = -3.55%
-    15-04 -> predicted = 175586; observed = 183785; error = -4.67%
-    16-04 -> predicted = 182725; observed = 188200; error = -3.00%
-    17-04 -> predicted = 187999; observed = 192887; error = -2.60%
-    18-04 -> predicted = 193320; observed = 197833; error = -2.33%
-    19-04 -> predicted = 195384; observed = 202986; error = -3.89%
-    20-04 -> predicted = 200162; observed = 206601; error = -3.22%
-    21-04 -> predicted = 204476; observed = 210255; error = -2.83%
-    22-04 -> predicted = 208146; observed = 214006; error = -2.82%
-    23-04 -> predicted = 212600; observed = 218748; error = -2.89%
-    24-04 -> predicted = 217659; observed = 222260; error = -2.11%
-    25-04 -> predicted = 226504; observed = 226149; error =  0.16%
-    26-04 -> predicted = 227754; observed = 228937; error = -0.52%
-    27-04 -> predicted = 229499; observed = 231522; error = -0.88%
-    28-04 -> predicted = 232215; observed = 234509; error = -0.99%
-    29-04 -> predicted = 234834; observed = 237937; error = -1.32%
-    30-04 -> predicted = 240088; observed = 241099; error = -0.42%
-    01-05 -> predicted = 242630; observed = 244379; error = -0.72%
-    02-05 -> predicted = 246030; observed = 246851; error = -0.33%
-    03-05 -> predicted = 247936; observed = 248437; error = -0.20%
-    04-05 -> predicted = 248609; observed = 249436; error = -0.33%
-    05-05 -> predicted = 249301; observed = 251407; error = -0.84%
-    06-05 -> predicted = 252385; observed = 254403; error = -0.80%
-    07-05 -> predicted = 256492; observed = 257367; error = -0.34%
-    08-05 -> predicted = 259660; observed = 260389; error = -0.28%
-    09-05 -> predicted = 263064; observed = 263074; error =  0.00%
-    10-05 -> predicted = 265332; observed = 267556; error = -0.84%
-    11-05 -> predicted = 266352; observed = 268311; error = -0.74%
-    12-05 -> predicted = 268950; observed = 269520; error = -0.21%
+    06-04 -> predicted = 136782; observed = 142412; error = -4.12%
+    07-04 -> predicted = 139305; observed = 147674; error = -6.01%
+    08-04 -> predicted = 145988; observed = 153280; error = -4.99%
+    09-04 -> predicted = 152870; observed = 159076; error = -4.06%
+    10-04 -> predicted = 158202; observed = 163679; error = -3.46%
+    11-04 -> predicted = 161598; observed = 168637; error = -4.36%
+    12-04 -> predicted = 166682; observed = 172688; error = -3.60%
+    13-04 -> predicted = 170186; observed = 175821; error = -3.31%
+    14-04 -> predicted = 172973; observed = 179153; error = -3.57%
+    15-04 -> predicted = 175586; observed = 183840; error = -4.70%
+    16-04 -> predicted = 182725; observed = 188259; error = -3.03%
+    17-04 -> predicted = 187999; observed = 192945; error = -2.63%
+    18-04 -> predicted = 193320; observed = 197893; error = -2.37%
+    19-04 -> predicted = 195384; observed = 203046; error = -3.92%
+    20-04 -> predicted = 200162; observed = 206661; error = -3.25%
+    21-04 -> predicted = 204476; observed = 210316; error = -2.86%
+    22-04 -> predicted = 208146; observed = 214068; error = -2.85%
+    23-04 -> predicted = 212600; observed = 218809; error = -2.92%
+    24-04 -> predicted = 217659; observed = 222326; error = -2.14%
+    25-04 -> predicted = 226504; observed = 226216; error =  0.13%
+    26-04 -> predicted = 227754; observed = 229005; error = -0.55%
+    27-04 -> predicted = 229499; observed = 231589; error = -0.91%
+    28-04 -> predicted = 232215; observed = 234576; error = -1.02%
+    29-04 -> predicted = 234834; observed = 238011; error = -1.35%
+    30-04 -> predicted = 240088; observed = 241173; error = -0.45%
+    01-05 -> predicted = 242630; observed = 244453; error = -0.75%
+    02-05 -> predicted = 246030; observed = 246926; error = -0.36%
+    03-05 -> predicted = 247936; observed = 248512; error = -0.23%
+    04-05 -> predicted = 248609; observed = 249511; error = -0.36%
+    05-05 -> predicted = 249301; observed = 251486; error = -0.88%
+    06-05 -> predicted = 252385; observed = 254486; error = -0.83%
+    07-05 -> predicted = 256492; observed = 257453; error = -0.37%
+    08-05 -> predicted = 259660; observed = 260478; error = -0.32%
+    09-05 -> predicted = 263064; observed = 263166; error = -0.04%
+    10-05 -> predicted = 265332; observed = 267650; error = -0.87%
+    11-05 -> predicted = 266352; observed = 268477; error = -0.80%
+    12-05 -> predicted = 268950; observed = 269742; error = -0.29%
+    13-05 -> predicted = 270729; observed = 271095; error = -0.14%
 
     Deaths forecast:
 
@@ -125,6 +126,7 @@ Previous predictions:
     10-05 -> predicted = 26657; observed = 26621; error =  0.14%
     11-05 -> predicted = 26764; observed = 26744; error =  0.07%
     12-05 -> predicted = 26867; observed = 26920; error = -0.20%
+    13-05 -> predicted = 27096; observed = 27104; error = -0.03%
 
 -----
 
@@ -144,64 +146,65 @@ the model will decrease.
 
 ![](README_files/figure-gfm/regresion-1.png)<!-- -->
 
-##### Infected forecast for tomorrow (2020-05-13): 262669, with 95% prediction interval: (246336 , 279002)
+##### Infected forecast for tomorrow (2020-05-14): 265146, with 95% prediction interval: (248837 , 281455)
 
-##### Deaths forecast for tomorrow (2020-05-13): 26650, with 95% prediction interval: (25571 , 27730)
+##### Deaths forecast for tomorrow (2020-05-14): 26851, with 95% prediction interval: (25777 , 27925)
 
 Previous predictions:
 
     Infected forecast:
 
-    24-03 -> predicted =  38574; observed =  48946; error = -26.9%
-    25-03 -> predicted =  44008; observed =  57494; error = -30.6%
-    26-03 -> predicted =  51614; observed =  66447; error = -28.7%
-    27-03 -> predicted =  60476; observed =  75628; error = -25.1%
-    28-03 -> predicted =  69832; observed =  83873; error = -20.1%
-    29-03 -> predicted =  79588; observed =  90295; error = -13.5%
-    30-03 -> predicted =  88856; observed =  96108; error =  -8.2%
-    31-03 -> predicted =  97620; observed = 104254; error =  -6.8%
-    01-04 -> predicted = 107073; observed = 111666; error =  -4.3%
-    02-04 -> predicted = 116393; observed = 119245; error =  -2.5%
-    03-04 -> predicted = 125701; observed = 126512; error =  -0.6%
-    04-04 -> predicted = 134713; observed = 133183; error =   1.1%
-    05-04 -> predicted = 143291; observed = 138716; error =   3.2%
-    06-04 -> predicted = 151139; observed = 142383; error =   5.8%
-    07-04 -> predicted = 157785; observed = 147642; error =   6.4%
-    08-04 -> predicted = 163883; observed = 153244; error =   6.5%
-    09-04 -> predicted = 156194; observed = 159038; error =  -1.8%
-    10-04 -> predicted = 159990; observed = 163638; error =  -2.3%
-    11-04 -> predicted = 163201; observed = 168595; error =  -3.3%
-    12-04 -> predicted = 166184; observed = 172643; error =  -3.9%
-    13-04 -> predicted = 168756; observed = 175776; error =  -4.2%
-    14-04 -> predicted = 170778; observed = 179109; error =  -4.9%
-    15-04 -> predicted = 172277; observed = 183785; error =  -6.7%
-    16-04 -> predicted = 174407; observed = 188200; error =  -7.9%
-    17-04 -> predicted = 177122; observed = 192887; error =  -8.9%
-    18-04 -> predicted = 178734; observed = 197833; error = -10.7%
-    19-04 -> predicted = 182176; observed = 202986; error = -11.4%
-    20-04 -> predicted = 185733; observed = 206601; error = -11.2%
-    21-04 -> predicted = 189443; observed = 210255; error = -11.0%
-    22-04 -> predicted = 193176; observed = 214006; error = -10.8%
-    23-04 -> predicted = 197066; observed = 218748; error = -11.0%
-    24-04 -> predicted = 201285; observed = 222260; error = -10.4%
-    25-04 -> predicted = 206656; observed = 226149; error =  -9.4%
-    26-04 -> predicted = 211791; observed = 228937; error =  -8.1%
-    27-04 -> predicted = 216298; observed = 231522; error =  -7.0%
-    28-04 -> predicted = 220303; observed = 234509; error =  -6.4%
-    29-04 -> predicted = 223900; observed = 237937; error =  -6.3%
-    30-04 -> predicted = 227692; observed = 241099; error =  -5.9%
-    01-05 -> predicted = 231382; observed = 244379; error =  -5.6%
-    02-05 -> predicted = 232197; observed = 246851; error =  -6.3%
-    03-05 -> predicted = 235320; observed = 248437; error =  -5.6%
-    04-05 -> predicted = 237926; observed = 249436; error =  -4.8%
-    05-05 -> predicted = 240127; observed = 251407; error =  -4.7%
-    06-05 -> predicted = 242505; observed = 254403; error =  -4.9%
-    07-05 -> predicted = 244965; observed = 257367; error =  -5.1%
-    08-05 -> predicted = 247712; observed = 260389; error =  -5.1%
-    09-05 -> predicted = 250661; observed = 263074; error =  -5.0%
-    10-05 -> predicted = 253550; observed = 267556; error =  -5.5%
-    11-05 -> predicted = 256277; observed = 268311; error =  -4.7%
-    12-05 -> predicted = 259989; observed = 269520; error =  -3.7%
+    24-03 -> predicted =  38574; observed =  48953; error = -26.9%
+    25-03 -> predicted =  44008; observed =  57506; error = -30.7%
+    26-03 -> predicted =  51614; observed =  66460; error = -28.8%
+    27-03 -> predicted =  60476; observed =  75641; error = -25.1%
+    28-03 -> predicted =  69832; observed =  83885; error = -20.1%
+    29-03 -> predicted =  79588; observed =  90309; error = -13.5%
+    30-03 -> predicted =  88856; observed =  96122; error =  -8.2%
+    31-03 -> predicted =  97620; observed = 104267; error =  -6.8%
+    01-04 -> predicted = 107073; observed = 111680; error =  -4.3%
+    02-04 -> predicted = 116393; observed = 119263; error =  -2.5%
+    03-04 -> predicted = 125701; observed = 126535; error =  -0.7%
+    04-04 -> predicted = 134713; observed = 133210; error =   1.1%
+    05-04 -> predicted = 143291; observed = 138744; error =   3.2%
+    06-04 -> predicted = 151139; observed = 142412; error =   5.8%
+    07-04 -> predicted = 157785; observed = 147674; error =   6.4%
+    08-04 -> predicted = 163883; observed = 153280; error =   6.5%
+    09-04 -> predicted = 156194; observed = 159076; error =  -1.8%
+    10-04 -> predicted = 159990; observed = 163679; error =  -2.3%
+    11-04 -> predicted = 163201; observed = 168637; error =  -3.3%
+    12-04 -> predicted = 166184; observed = 172688; error =  -3.9%
+    13-04 -> predicted = 168756; observed = 175821; error =  -4.2%
+    14-04 -> predicted = 170778; observed = 179153; error =  -4.9%
+    15-04 -> predicted = 172277; observed = 183840; error =  -6.7%
+    16-04 -> predicted = 174407; observed = 188259; error =  -7.9%
+    17-04 -> predicted = 177122; observed = 192945; error =  -8.9%
+    18-04 -> predicted = 178734; observed = 197893; error = -10.7%
+    19-04 -> predicted = 182176; observed = 203046; error = -11.5%
+    20-04 -> predicted = 185733; observed = 206661; error = -11.3%
+    21-04 -> predicted = 189443; observed = 210316; error = -11.0%
+    22-04 -> predicted = 193176; observed = 214068; error = -10.8%
+    23-04 -> predicted = 197066; observed = 218809; error = -11.0%
+    24-04 -> predicted = 201285; observed = 222326; error = -10.5%
+    25-04 -> predicted = 206656; observed = 226216; error =  -9.5%
+    26-04 -> predicted = 211791; observed = 229005; error =  -8.1%
+    27-04 -> predicted = 216298; observed = 231589; error =  -7.1%
+    28-04 -> predicted = 220303; observed = 234576; error =  -6.5%
+    29-04 -> predicted = 223900; observed = 238011; error =  -6.3%
+    30-04 -> predicted = 227692; observed = 241173; error =  -5.9%
+    01-05 -> predicted = 231382; observed = 244453; error =  -5.6%
+    02-05 -> predicted = 232197; observed = 246926; error =  -6.3%
+    03-05 -> predicted = 235320; observed = 248512; error =  -5.6%
+    04-05 -> predicted = 237926; observed = 249511; error =  -4.9%
+    05-05 -> predicted = 240127; observed = 251486; error =  -4.7%
+    06-05 -> predicted = 242505; observed = 254486; error =  -4.9%
+    07-05 -> predicted = 244965; observed = 257453; error =  -5.1%
+    08-05 -> predicted = 247712; observed = 260478; error =  -5.2%
+    09-05 -> predicted = 250661; observed = 263166; error =  -5.0%
+    10-05 -> predicted = 253550; observed = 267650; error =  -5.6%
+    11-05 -> predicted = 256277; observed = 268477; error =  -4.8%
+    12-05 -> predicted = 259989; observed = 269742; error =  -3.8%
+    13-05 -> predicted = 262669; observed = 271095; error =  -3.2%
 
     Deaths forecast:
 
@@ -255,6 +258,7 @@ Previous predictions:
     10-05 -> predicted = 26069; observed = 26621; error = -2.1%
     11-05 -> predicted = 26274; observed = 26744; error = -1.8%
     12-05 -> predicted = 26459; observed = 26920; error = -1.7%
+    13-05 -> predicted = 26650; observed = 27104; error = -1.7%
 
 -----
 
@@ -275,70 +279,71 @@ Estimates with the SIR model:
 
 ![](README_files/figure-gfm/SIR%20plots-1.png)<!-- -->
 
-According to this model, the rate of infection is 1.36, the height of
-the pandemic will be reached by 30/05/2020.
+According to this model, the rate of infection is 1.19, the height of
+the pandemic will be reached by 21/05/2020.
 
-About 1850689 people would be infected by then, which translates to
-about 888330 hospitalized cases, about 111041 cases in need of intensive
-care (UCI) and up to 83281 deaths.
+About 616551 people would be infected by then, which translates to about
+295945 hospitalized cases, about 36993 cases in need of intensive care
+(UCI) and up to 27745 deaths.
 
-#### Infected forecast for tomorrow: 398222 (2020-05-13)
+#### Infected forecast for tomorrow: 418215 (2020-05-14)
 
 Previous predictions:
 
-    21-03 -> predicted =  24896; observed =  31744; error = -27.5%
-    22-03 -> predicted =  30117; observed =  36610; error = -21.6%
-    23-03 -> predicted =  35272; observed =  41255; error = -17.0%
-    24-03 -> predicted =  57913; observed =  48946; error =  15.5%
-    25-03 -> predicted =  48440; observed =  57494; error = -18.7%
-    26-03 -> predicted =  57420; observed =  66447; error = -15.7%
-    27-03 -> predicted =  67868; observed =  75628; error = -11.4%
-    28-03 -> predicted =  78955; observed =  83873; error =  -6.2%
-    29-03 -> predicted =  90661; observed =  90295; error =   0.4%
-    30-03 -> predicted = 102000; observed =  96108; error =   5.8%
-    31-03 -> predicted = 113106; observed = 104254; error =   7.8%
-    01-04 -> predicted = 125311; observed = 111666; error =  10.9%
-    02-04 -> predicted = 137373; observed = 119245; error =  13.2%
-    03-04 -> predicted = 150165; observed = 126512; error =  15.8%
-    04-04 -> predicted = 162414; observed = 133183; error =  18.0%
-    05-04 -> predicted = 174860; observed = 138716; error =  20.7%
-    06-04 -> predicted = 186188; observed = 142383; error =  23.5%
-    07-04 -> predicted = 196945; observed = 147642; error =  25.0%
-    08-04 -> predicted = 206927; observed = 153244; error =  25.9%
-    09-04 -> predicted = 217154; observed = 159038; error =  26.8%
-    10-04 -> predicted = 227228; observed = 163638; error =  28.0%
-    11-04 -> predicted = 236766; observed = 168595; error =  28.8%
-    12-04 -> predicted = 246144; observed = 172643; error =  29.9%
-    13-04 -> predicted = 254626; observed = 175776; error =  31.0%
-    14-04 -> predicted = 262925; observed = 179109; error =  31.9%
-    15-04 -> predicted = 270168; observed = 183785; error =  32.0%
-    16-04 -> predicted = 278011; observed = 188200; error =  32.3%
-    17-04 -> predicted = 286247; observed = 192887; error =  32.6%
-    18-04 -> predicted = 240850; observed = 197833; error =  17.9%
-    19-04 -> predicted = 244558; observed = 202986; error =  17.0%
-    20-04 -> predicted = 251935; observed = 206601; error =  18.0%
-    21-04 -> predicted = 263275; observed = 210255; error =  20.1%
-    22-04 -> predicted = 266091; observed = 214006; error =  19.6%
-    23-04 -> predicted = 273274; observed = 218748; error =  20.0%
-    24-04 -> predicted = 285694; observed = 222260; error =  22.2%
-    25-04 -> predicted = 293874; observed = 226149; error =  23.0%
-    26-04 -> predicted = 301895; observed = 228937; error =  24.2%
-    27-04 -> predicted = 303361; observed = 231522; error =  23.7%
-    28-04 -> predicted = 316803; observed = 234509; error =  26.0%
-    29-04 -> predicted = 316741; observed = 237937; error =  24.9%
-    30-04 -> predicted = 330817; observed = 241099; error =  27.1%
-    01-05 -> predicted = 337735; observed = 244379; error =  27.6%
-    02-05 -> predicted = 350027; observed = 246851; error =  29.5%
-    03-05 -> predicted = 356328; observed = 248437; error =  30.3%
-    04-05 -> predicted = 362206; observed = 249436; error =  31.1%
-    05-05 -> predicted = 357248; observed = 251407; error =  29.6%
-    06-05 -> predicted = 362444; observed = 254403; error =  29.8%
-    07-05 -> predicted = 367623; observed = 257367; error =  30.0%
-    08-05 -> predicted = 385027; observed = 260389; error =  32.4%
-    09-05 -> predicted = 390904; observed = 263074; error =  32.7%
-    10-05 -> predicted = 396836; observed = 267556; error =  32.6%
-    11-05 -> predicted = 388059; observed = 268311; error =  30.9%
-    12-05 -> predicted = 407750; observed = 269520; error =  33.9%
+    21-03 -> predicted =  24896; observed =  31750; error = -27.5%
+    22-03 -> predicted =  30117; observed =  36616; error = -21.6%
+    23-03 -> predicted =  35272; observed =  41262; error = -17.0%
+    24-03 -> predicted =  57913; observed =  48953; error =  15.5%
+    25-03 -> predicted =  48440; observed =  57506; error = -18.7%
+    26-03 -> predicted =  57420; observed =  66460; error = -15.7%
+    27-03 -> predicted =  67868; observed =  75641; error = -11.5%
+    28-03 -> predicted =  78955; observed =  83885; error =  -6.2%
+    29-03 -> predicted =  90661; observed =  90309; error =   0.4%
+    30-03 -> predicted = 102000; observed =  96122; error =   5.8%
+    31-03 -> predicted = 113106; observed = 104267; error =   7.8%
+    01-04 -> predicted = 125311; observed = 111680; error =  10.9%
+    02-04 -> predicted = 137373; observed = 119263; error =  13.2%
+    03-04 -> predicted = 150165; observed = 126535; error =  15.7%
+    04-04 -> predicted = 162414; observed = 133210; error =  18.0%
+    05-04 -> predicted = 174860; observed = 138744; error =  20.7%
+    06-04 -> predicted = 186188; observed = 142412; error =  23.5%
+    07-04 -> predicted = 196945; observed = 147674; error =  25.0%
+    08-04 -> predicted = 206927; observed = 153280; error =  25.9%
+    09-04 -> predicted = 217154; observed = 159076; error =  26.7%
+    10-04 -> predicted = 227228; observed = 163679; error =  28.0%
+    11-04 -> predicted = 236766; observed = 168637; error =  28.8%
+    12-04 -> predicted = 246144; observed = 172688; error =  29.8%
+    13-04 -> predicted = 254626; observed = 175821; error =  30.9%
+    14-04 -> predicted = 262925; observed = 179153; error =  31.9%
+    15-04 -> predicted = 270168; observed = 183840; error =  32.0%
+    16-04 -> predicted = 278011; observed = 188259; error =  32.3%
+    17-04 -> predicted = 286247; observed = 192945; error =  32.6%
+    18-04 -> predicted = 240850; observed = 197893; error =  17.8%
+    19-04 -> predicted = 244558; observed = 203046; error =  17.0%
+    20-04 -> predicted = 251935; observed = 206661; error =  18.0%
+    21-04 -> predicted = 263275; observed = 210316; error =  20.1%
+    22-04 -> predicted = 266091; observed = 214068; error =  19.6%
+    23-04 -> predicted = 273274; observed = 218809; error =  19.9%
+    24-04 -> predicted = 285694; observed = 222326; error =  22.2%
+    25-04 -> predicted = 293874; observed = 226216; error =  23.0%
+    26-04 -> predicted = 301895; observed = 229005; error =  24.1%
+    27-04 -> predicted = 303361; observed = 231589; error =  23.7%
+    28-04 -> predicted = 316803; observed = 234576; error =  26.0%
+    29-04 -> predicted = 316741; observed = 238011; error =  24.9%
+    30-04 -> predicted = 330817; observed = 241173; error =  27.1%
+    01-05 -> predicted = 337735; observed = 244453; error =  27.6%
+    02-05 -> predicted = 350027; observed = 246926; error =  29.5%
+    03-05 -> predicted = 356328; observed = 248512; error =  30.3%
+    04-05 -> predicted = 362206; observed = 249511; error =  31.1%
+    05-05 -> predicted = 357248; observed = 251486; error =  29.6%
+    06-05 -> predicted = 362444; observed = 254486; error =  29.8%
+    07-05 -> predicted = 367623; observed = 257453; error =  30.0%
+    08-05 -> predicted = 385027; observed = 260478; error =  32.3%
+    09-05 -> predicted = 390904; observed = 263166; error =  32.7%
+    10-05 -> predicted = 396836; observed = 267650; error =  32.6%
+    11-05 -> predicted = 388059; observed = 268477; error =  30.8%
+    12-05 -> predicted = 407750; observed = 269742; error =  33.8%
+    13-05 -> predicted = 398222; observed = 271095; error =  31.9%
 
 -----
 
