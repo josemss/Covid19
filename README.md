@@ -1,13 +1,11 @@
-Covid-19: Incidencias acumuladas
+Covid-19: Incidencia acumulada
 ================
 JMSS \[Usal - CIC\]
 (updated: 02 dic 2021)
 
-# Incidencia acumulada del Covid19 a 14 días por cada 100.000 habitantes
+### Incidencia acumulada del Covid19 a 14 días por cada 100.000 habitantes
 
-## Datos extraidos de:
-
-Daily data: [Datadista
+Datos desde *01/01/2020* extraidos de: [Datadista
 GitHub](https://github.com/datadista/datasets/tree/master/COVID%2019)
-(and Ministerio de Sanidad
-[MSCBS](https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm))
+
+![](README_files/figure-gfm/graficos-1.png)<!-- -->![](README_files/figure-gfm/graficos-2.png)<!-- -->![](README_files/figure-gfm/graficos-3.png)<!-- -->
