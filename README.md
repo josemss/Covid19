@@ -1,7 +1,7 @@
 Covid-19: Incidencia acumulada
 ================
 JMSS \[Usal - CIC\]
-(updated: 10 dic 2021)
+(updated: 15 dic. 2021)
 
 ### Incidencia acumulada del Covid19 a 14 días por cada 100.000 habitantes
 
