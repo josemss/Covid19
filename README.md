@@ -1,11 +1,11 @@
 Covid-19: Incidencia acumulada
 ================
 JMSS \[Usal - CIC\]
-(updated: 29 dic 2021)
+(updated: 08 ene 2022)
 
 ### Incidencia acumulada del Covid19 a 14 días por cada 100.000 habitantes
 
-Datos desde *01/01/2020* extraidos de: [CNE-covid
+Datos extraídos de [CNE-covid
 ISCIII](https://cnecovid.isciii.es/covid19) y de [Junta de Castilla y
 León - Datos
 abiertos](https://analisis.datosabiertos.jcyl.es/pages/home/)
