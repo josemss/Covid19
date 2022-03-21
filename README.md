@@ -10,4 +10,4 @@ ISCIII](https://cnecovid.isciii.es/covid19) y de [Junta de Castilla y
 León - Datos
 abiertos](https://analisis.datosabiertos.jcyl.es/pages/home/)
 
-![](README_files/figure-gfm/graficos-1.png)<!-- -->![](README_files/figure-gfm/graficos-2.png)<!-- -->![](README_files/figure-gfm/graficos-3.png)<!-- -->![](README_files/figure-gfm/graficos-4.png)<!-- -->
+![](README_files/figure-gfm/graficos-1.pdf)<!-- -->![](README_files/figure-gfm/graficos-2.pdf)<!-- -->![](README_files/figure-gfm/graficos-3.pdf)<!-- -->![](README_files/figure-gfm/graficos-4.pdf)<!-- -->
