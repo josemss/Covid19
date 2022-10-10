@@ -1,7 +1,7 @@
 Covid-19: Incidencia acumulada
 ================
 JMSS \[Usal - CIC\]
-(updated: 03 oct 2022)
+(updated: 10 oct 2022)
 
 ### Incidencia acumulada del Covid19 por cada 100.000 habitantes
 
